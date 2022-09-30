@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #3c638e;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.court-container {
+    display: grid;
+    width: 90vw;
+    grid-template-columns: 90vw;
+    /* maybe fr better to handle row gaps more cleanly */
+    grid-template-rows: 11.25vh 67.5vh 11.25vh; 
+    row-gap: .6vh;
+    background-color: #6c935c;
+}
+
+/* define various court divs as proportion of .court-container */
+
+.doubles-alley-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 0.6vh;
+}
+
+.doubles-alley-top-left {
+    background-color: #6c935c;
+}
+
+.doubles-alley-top-right {
+    background-color: #6c935c;
+}
+
+.doubles-alley-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 0.6vh;
+}
+
+.doubles-alley-bottom-left {
+    background-color: #6c935c;
+}
+
+.doubles-alley-bottom-right {
+    background-color: #6c935c;
+}
+
+.centre-court-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    column-gap: .6vh;
+}
+
+.no-mans-land-left {
+    background-color: #6c935c;
+}
+
+.service-boxes-left-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: .6vh;
+}
+
+.service-boxes-left-top {
+    background-color: #6c935c;
+}
+
+.service-boxes-left-bottom {
+    background-color: #6c935c;
+}
+
+.service-boxes-right-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: .6vh;
+}
+
+.service-boxes-right-top {
+    background-color: #6c935c;
+}
+
+.service-boxes-right-bottom {
+    background-color: #6c935c;
+}
+
+.no-mans-land-right {
+    background-color: #6c935c;
+}
+
+/* tennis court aspect ratio
+78 ft x 36 ft (doubles) = 2.167
+78 ft x 27 ft (singles) */
+
+/* maybe i can handle this lingering .167 in the border */
+
+@media (aspect-ratio: 2/1) {
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+}  

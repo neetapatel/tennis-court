@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Variation 2</title>
+
+        <!-- CSS goes here -->
+        <style>
+            .Room {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            a {
+                text-decoration: wavy overline blue;
+            }
+            .Classmate {
+                aspect-ratio: 1 / 1; /* width / height */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .Footer {
+                position: fixed;
+                /* matching the automatic margin of 8px on body element */
+                right: 8px;
+                top: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="Room">
+            <article class="Classmate" id="Cat">
+                <a href="/~cat">Cat</a>
+            </article>
+            <article class="Classmate" id="Claire">
+                <a href="/~claire">Claire</a>
+            </article>
+            <article class="Classmate" id="Daedalus">
+                <a href="/~daedalus">Daedalus</a>
+            </article>
+            <article class="Classmate" id="Darnell">
+                <a href="/~darnell">Darnell</a>
+            </article>
+            <article class="Classmate" id="Davy">
+                <a href="/~davy">Davy</a>
+            </article>
+            <article class="Classmate" id="Julio">
+                <a href="/~julio">Julio</a>
+            </article>
+            <article class="Classmate" id="Junyan">
+                <a href="/~junyan">Junyan</a>
+            </article>
+            <article class="Classmate" id="Kaming">
+                <a href="/~kaming">Kaming</a>
+            </article>
+            <article class="Classmate" id="Ken">
+                <a href="/~ken">Ken</a>
+            </article>
+            <article class="Classmate" id="Neeta">
+                <a href="/~neeta">Neeta</a>
+            </article>
+            <article class="Classmate" id="Lobbin">
+                <a href="/~lobbin">Lobbin</a>
+            </article>
+            <article class="Classmate" id="Qiang">
+                <a href="/~qiang">Qiang</a>
+            </article>
+            <article class="Classmate" id="Sarah">
+                <a href="/~sarah">Sarah</a>
+            </article>
+            <article class="Classmate" id="Siri">
+                <a href="/~siri">Siri</a>
+            </article>
+            <article class="Classmate" id="Xinyi">
+                <a href="/~xinyi">Xinyi</a>
+            </article>
+        </section>
+        <footer class="Footer">
+            <a href="/">(Localhosts)</a>
+        </footer>
+    </body>
+</html>
