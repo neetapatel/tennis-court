@@ -1,0 +1,95 @@
+body {
+    background: lime;
+    margin: 0;
+}
+
+.Nav {
+    padding: 50px;
+    background-color: fuchsia;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.Nav-item {
+    padding: 15px;
+    background-color: red;
+    /* 1 is kind of like a fraction as well */
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100px;
+    /* flex-grow and flex-shrink are always relative units */
+}
+
+.Nav-item--wide {
+    flex-grow: 2;
+}
+
+.Content {
+    padding: 50px;
+    background: yellow;
+    display: grid;
+    /* shorthand for "1fr 1fr 1fr" */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    aspect-ratio: 1/1;
+}
+
+.Content-item {
+    padding: 50px;
+    background-color: orange;
+    display: flex;
+}
+
+.Content-item.is-tall {
+    grid-row: span 2;
+}
+
+.Content-item.is-wide {
+    grid-column: span 2;
+}
+
+.Content-item.is-big {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.image {
+    max-width: 75px;
+}
+
+.Content-item.is-Anthouse {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+@media (max-width: 1200px) {
+
+    .Content {
+        grid-template-columns: 1fr;
+    }
+
+    .Content-item.is-tall, 
+    .Content-item.is-wide, 
+    .Content-item.is-big {
+        grid-column: span 1;
+    }
+
+    .Nav-item {
+        flex-grow: 1;
+    }
+}
+
+@media print {
+    .Nav, .Content-item {
+        display: none;
+    }
+    .Content-item.is-Anthouse {
+        display: block;
+    }
+    .image {
+        max-width: 200px;
+    }
+}

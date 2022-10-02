@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: white;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.court-container {
+    display: grid;
+    width: 90vw;
+    height: 90vh;
+    grid-template-columns: 1fr 1.17fr 1.17fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 1fr;  
+    row-gap: .6vh;
+    column-gap: 0.6vh;
+    background-color: black;
+    border: .6vh black solid;
+}
+
+.doubles-alley-top-left {
+    background-color: red;
+    grid-column: 1 / 3;
+}
+
+.doubles-alley-top-right {
+    background-color: yellow;
+    grid-column: 3 / 5;
+}
+
+.no-mans-land-left {
+    background-color: blue;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+}
+
+.service-boxes-left-top {
+    background-color: white;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.service-boxes-left-bottom {
+    background-color: black;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+.service-boxes-right-top {
+    background-color: red;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.service-boxes-right-bottom {
+    background-color: white;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.no-mans-land-right {
+    background-color: black;
+    grid-column: 4 / 5;
+    grid-row: 2 / 4;
+}
+
+.doubles-alley-bottom-left {
+    background-color: yellow;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+
+.doubles-alley-bottom-right {
+    background-color: blue;
+    grid-column: 3 / 5;
+    grid-row: 4 / 5;
+}
+
+/* maybe there's audio context */
+/* maybe there's a dot that shows you where to size your browser */
+
+/* tennis court aspect ratio
+78 ft x 36 ft (doubles) = 2.167
+78 ft x 27 ft (singles) */
+
+/* can i define a slim range so there's a higher chance user activates media query? */
+
+@media (aspect-ratio: 2/1) {
+    html {
+        background-color: #3c638e; 
+    }
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .court-container > * {
+        background-color: #6c935c;
+    }
+}   

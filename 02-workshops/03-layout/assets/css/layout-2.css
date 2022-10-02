@@ -1,0 +1,51 @@
+html {
+    background-color: fuchsia;
+}
+
+body {
+    margin: 0;
+}
+
+.Header {
+    padding: 50px;
+    background-color: yellow;
+}
+
+.Nav {
+    padding: 50px;
+    background-color: steelblue;
+    position: sticky;
+    top: 0;
+}
+
+.Nav-item {
+    padding: 25px;
+    margin-bottom: 25px;
+    background-color: orange;
+}
+
+.Nav-item:last-of-type {
+    margin-bottom: 0px;;
+}
+
+.Content {
+    padding: 50px;
+    background-color: lightgrey;
+    grid-column: span 2;
+}
+
+.Content-item {
+    padding: 150px;
+    margin-bottom: 50px;
+    background-color: gold;
+}
+
+.Content-item:last-of-type {
+    margin-bottom: 0px;;
+}
+
+.Main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+}

@@ -103,10 +103,10 @@ html {
 78 ft x 27 ft (singles) */
 
 /* maybe i can handle this lingering .167 in the border */
-
+ 
 @media (aspect-ratio: 2/1) {
     .court-container {
         background-color: white;
         border: .6vh white solid;
     }
-}  
+}   

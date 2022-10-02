@@ -1,0 +1,28 @@
+html {
+    background: black;
+}
+
+.Dot {
+    background: yellowgreen;
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: -50%;
+    transform: translate(-50%, -50%);
+    animation: move 24s infinite linear;
+    animation-delay: 4s;
+}
+
+@keyframes move {
+    0% {
+        left: -50%;
+    }
+    8.333% {
+        left: 150%;
+    }
+    100% {
+        left: 150%;
+    }
+}

@@ -1,0 +1,26 @@
+* {
+    /* ensures padding on body is counted */
+    box-sizing: border-box;
+}
+
+body {
+    background: yellow;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    /* align-items default is stretch */
+}
+
+.Container {
+    padding: 50px;
+    background-color: orange;
+}
+
+.Box {
+    width: 200px;
+    height: 200px;
+    background-color: orangered;
+}
