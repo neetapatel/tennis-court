@@ -85,12 +85,12 @@ html {
 /* maybe there's a dot that shows you where to size your browser */
 
 /* tennis court aspect ratio
-78 ft x 36 ft (doubles) = 2.167
+78 ft x 36 ft (doubles) = 2.167 = 13 / 6
 78 ft x 27 ft (singles) */
 
 /* can i define a slim range so there's a higher chance user activates media query? */
 
-@media (aspect-ratio: 2/1) {
+@media (12/6 <= aspect-ratio <= 14/6) {
     html {
         background-color: #3c638e; 
     }
@@ -102,3 +102,40 @@ html {
         background-color: #6c935c;
     }
 }   
+
+@media (10/6 <= aspect-ratio <= 12 /6) {
+    html, .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #9EB1C7;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #364AAE;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #B64A2E;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #B6C92E;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #364A2E;
+    }
+}
+
+@media (14/6 <= aspect-ratio <= 16 /6) {
+    html, .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #9EB1C7;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #364AAE;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #B64A2E;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #B6C92E;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #364A2E;
+    }
+}
+
