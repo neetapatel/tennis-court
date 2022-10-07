@@ -9,6 +9,7 @@ html {
     display: grid;
     align-items: center;
     justify-content: center;
+    /* transition: background-color 2s; */
 }
 
 .court-container {
@@ -21,6 +22,8 @@ html {
     column-gap: 0.6vh;
     background-color: black;
     border: .6vh black solid;
+    /* transition: border linear 1s;
+    transition: background-color linear 1s; */
 }
 
 .doubles-alley-top-left {
@@ -88,8 +91,89 @@ html {
 78 ft x 36 ft (doubles) = 2.167 = 13 / 6
 78 ft x 27 ft (singles) */
 
-/* can i define a slim range so there's a higher chance user activates media query? */
+/* can i define a more accurate range so there's a higher chance user activates media query? */
 
+
+/* between 1.33 - 1.67 */
+@media (8/6 <= aspect-ratio <= 10/6) {
+    html {
+        background-color: #9EB1C7;
+    } 
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #B6C9AE;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #364AAE;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #B64A2E;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #B6C92E;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #364A2E;
+    }
+}
+
+/* between 1.67 - 2 */
+@media (10/6 <= aspect-ratio <= 11/6) {
+    html {
+        background-color: #6D8AAB;
+    }
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #91AE85;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #516F85;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #916F45;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #91AE45;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #516F45;
+    }
+}
+
+@media (11/6 <= aspect-ratio <= 12/6) {
+    html {
+        background-color: #55779D;
+    }
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #7FA171;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #5F8171;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #7F8151;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #7FA151;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #5F8151;
+    }
+}
+
+/* realistic colors */
+/* between 2 - 2.33 */
+/* aspect ratio straddles 2.167 */
 @media (12/6 <= aspect-ratio <= 14/6) {
     html {
         background-color: #3c638e; 
@@ -101,11 +185,70 @@ html {
     .court-container > * {
         background-color: #6c935c;
     }
-}   
+}  
 
-@media (10/6 <= aspect-ratio <= 12 /6) {
-    html, .service-boxes-right-bottom, .service-boxes-left-top {
+@media (14/6 <= aspect-ratio <= 15/6) {
+    html {
+        background-color: #55779D;
+    }
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #7FA171;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #5F8171;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #7F8151;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #7FA151;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #5F8151;
+    }
+}
+
+/* between 2.33 - 2.67 */
+@media (15/6 <= aspect-ratio <= 16/6) {
+    html {
+        background-color: #6D8AAB;
+    }
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #91AE85;
+    }
+    .doubles-alley-bottom-right, .no-mans-land-left {
+        background-color: #516F85;
+    }
+    .doubles-alley-top-left, .service-boxes-right-top {
+        background-color: #916F45;
+    }
+    .doubles-alley-top-right, .doubles-alley-bottom-left {
+        background-color: #91AE45;
+    }
+    .service-boxes-left-bottom, .no-mans-land-right {
+        background-color: #516F45;
+    }
+}
+
+/* between 2.67 - 3 */
+@media (16/6 <= aspect-ratio <= 18/6) {
+    html {
         background-color: #9EB1C7;
+    } 
+    .court-container {
+        background-color: white;
+        border: .6vh white solid;
+    }
+    .service-boxes-right-bottom, .service-boxes-left-top {
+        background-color: #B6C9AE;
     }
     .doubles-alley-bottom-right, .no-mans-land-left {
         background-color: #364AAE;
@@ -120,22 +263,3 @@ html {
         background-color: #364A2E;
     }
 }
-
-@media (14/6 <= aspect-ratio <= 16 /6) {
-    html, .service-boxes-right-bottom, .service-boxes-left-top {
-        background-color: #9EB1C7;
-    }
-    .doubles-alley-bottom-right, .no-mans-land-left {
-        background-color: #364AAE;
-    }
-    .doubles-alley-top-left, .service-boxes-right-top {
-        background-color: #B64A2E;
-    }
-    .doubles-alley-top-right, .doubles-alley-bottom-left {
-        background-color: #B6C92E;
-    }
-    .service-boxes-left-bottom, .no-mans-land-right {
-        background-color: #364A2E;
-    }
-}
-
