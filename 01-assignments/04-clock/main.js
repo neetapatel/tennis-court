@@ -200,7 +200,7 @@ function rainy(mm) {
 
 function setup() {
   weatherBalloon();
-  window.setInterval(weatherBalloon, 10000);
+  window.setInterval(weatherBalloon, 120000);
   getTime();
   window.setInterval(getTime, 1000);
 }
