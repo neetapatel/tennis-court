@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Sound On</title>
+
+    <style>
+        html {
+            background-color: black;
+            height: 100%;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+        }
+        #ball {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: greenyellow;
+        }
+
+        #ball:hover {
+            transform: scale(110%);
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="ball"></div>
+    <audio id="audio">
+        <source src="tennis-audio-clip.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        var audio = document.getElementById("audio");
+        var ball = document.getElementById("ball");
+
+        function play() { audio.play(); console.log("in"); }
+        function stop() { audio.pause(); console.log("out"); }
+
+        ball.addEventListener('mouseover', play);
+        ball.addEventListener('mouseout', stop);
+    </script>
+</body>
+</html>

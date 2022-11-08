@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        html {
+            background: blue;
+            font-family: sans-serif;
+        }
+        .Counter-display {
+            margin: 0;
+            line-height: 0.75;
+        }
+        .Counter-bead {
+            padding: 40px;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            background: black;
+            border-radius: 50%;
+        }
+        .Counter-button {
+            position: fixed;
+            margin: 10px;
+        }
+        .Counter-button--decrease {
+            left: 0;
+            bottom: 0;
+        }
+        .Counter-button--increase {
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="Counter">
+        <div class="Counter-display"></div>
+        <div class="Counter-controls">
+            <button class="Counter-button Counter-button--decrease">-1</button>
+            <button class="Counter-button Counter-button--increase">+1</button>
+        </div>
+    </div>
+    <script src="counter.js"></script>
+</body>
+</html>

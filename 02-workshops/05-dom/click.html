@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click</title>
+    <style>
+        html {
+            background: lime;
+            font-family: sans-serif;
+        }
+        .Click-display {
+            margin: 0;
+            line-height: 0.75;
+            user-select: none;
+        }
+        .Click-button {
+            position: fixed;
+            margin: 10px;
+        }
+        .Click-button--decrease {
+            left: 0;
+            bottom: 0;
+        }
+        .Click-button--increase {
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="Click">
+        <div class="Click-display"></div>
+    </div>
+    <script src="click.js"></script>
+</body>
+</html>
