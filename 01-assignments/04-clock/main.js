@@ -182,8 +182,23 @@ function innerCourtDark() {
 function windy(speed) {
   // If wind speed is more than 25 mph, court is flapping in the wind.
   speed = Math.round(speed);
-  if (speed >= 25) {
+  if (speed > 2 && speed <= 5) {
+    $('.court-container').css("animation", "8s infinite alternate windy");
+  }
+  else if (speed > 5 && speed <= 10) {
+    $('.court-container').css("animation", "4s infinite alternate windy");
+  }
+  else if (speed > 10 && speed <= 15) {
     $('.court-container').css("animation", "2s infinite alternate windy");
+  }
+  else if (speed > 15 && speed <= 20) {
+    $('.court-container').css("animation", "1s infinite alternate windy");
+  }
+  else if (speed > 20 && speed <= 25) {
+    $('.court-container').css("animation", ".5s infinite alternate windy");
+  }
+  else if (speed > 25) {
+    $('.court-container').css("animation", ".25s infinite alternate windy");
   } 
   return;
 }
@@ -236,7 +251,7 @@ function weatherBalloonDemo_4() {
   // Moderate temp, but windy, between dawn and dusk
   $('marquee').html("The weather right now cool but windy.");
   getSaturation(65);
-  windy(30);
+  windy(23);
 }
 
 function weatherBalloonDemo_5() {
